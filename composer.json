@@ -1,0 +1,23 @@
+{
+    "name": "lcg/sendmail-swift-twig",
+    "description": "Send Mail with swiftmailer using twig template",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "twig/twig": "^2.12|^3.0",
+        "swiftmailer/swiftmailer": "^6.2",
+        "symfony/dependency-injection": "5.2.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brichard.Z",
+            "email": "brichard.zafy@lead-code-group.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LCGLib\\": "src/LCG/"
+        }
+    }
+}
