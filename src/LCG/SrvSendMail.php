@@ -5,7 +5,7 @@
  * Time: 18:05
  */
 
-namespace LCGLib;
+namespace LCG\Lib;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
