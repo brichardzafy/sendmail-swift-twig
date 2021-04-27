@@ -39,14 +39,14 @@ class SrvSendMail
     public function __construct(ContainerInterface $container,$app_name)
     {
         $transport = (new \Swift_SmtpTransport(
-            $container->getParameter("mailer_transport"),
+            $container->getParameter("mailer_host"),
             $container->getParameter("mailer_port")))
             ->setUsername($container->getParameter("mailer_email"))
             ->setPassword($container->getParameter("mailer_password")) ;
         $this->_mailer  = new \Swift_Mailer($transport);
         $this->_templating = $container->get('twig');
         $this->_app_name   = $app_name;
-        $this->_sender     = $container->getParameter("mailer_user");
+        $this->_sender     = $container->getParameter("mailer_sender_name");
     }
 
     /**
