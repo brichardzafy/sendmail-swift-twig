@@ -67,7 +67,7 @@ class SrvSendMail
             ->setTo($to)
             ->setBody(
                 $this->_templating->render(
-                    $template_path_name.'.html.twig',
+                    $template_path_name,
                     $message_vars
                 ),
                 'text/html'
