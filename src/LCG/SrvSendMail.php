@@ -46,7 +46,7 @@ class SrvSendMail
         $this->_mailer  = new \Swift_Mailer($transport);
         $this->_templating = $container->get('twig');
         $this->_app_name   = $app_name;
-        $this->_sender     = $container->getParameter("mailer_sender_name");
+        $this->_sender     = $container->getParameter("mailer_email");
     }
 
     /**
