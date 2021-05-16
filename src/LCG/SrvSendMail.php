@@ -40,8 +40,10 @@ class SrvSendMail
     {
         $transport = (new \Swift_SmtpTransport(
             $container->getParameter("mailer_host"),
-            $container->getParameter("mailer_port")))
-            ->setUsername($container->getParameter("mailer_email"))
+            $container->getParameter("mailer_port"),
+            $container->getParameter("mailer_encryption")
+        ))
+            ->setUsername($container->getParameter("mailer_user"))
             ->setPassword($container->getParameter("mailer_password")) ;
         $this->_mailer  = new \Swift_Mailer($transport);
         $this->_templating = $container->get('twig');
